@@ -24,16 +24,18 @@
     <div class="container">
 
         <img src="img/geneVale.png" class="float-left">
-        <img src="img/laSenia.png" class="m-4">
+        <img src="img/laSenia.png" class="m-1">
         <img src="img/direccion.png" class="float-right">
 
-        <h3 class="text-center">COMUNICACIÓ DE MESURES CORRECTORES</h3>
+        <h3 class="text-center" >COMUNICACIÓ DE MESURES CORRECTORES</h3>
 
         <form onsubmit="return onSubmit(this)">
             <p>ALUMNE/A <input name="alumne" type="text" class="m-2"> GRUP <input name="grupo" type="text" class="m-2"></p>
             <p>PROFESSOR/A <input name="profesor" type="text" class="m-2">Horari d'atenció <input type="text" class="m-2"></p>
             <p>Data de l'incident <input name="data" type="text" class="m-2">Hora <input name="hora" type="text" class="m-2">
                 Lloc <input name="lloc" type="text" class="m-2"></p>
+
+                <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea>
 
             <p>En aplicacio de l'article 37 del decret 39/08 sobre drets y deures, es comunica al para/mare de l'alumne
                 <br /> la imposicio de la següent mesura correctora:</p>
@@ -49,11 +51,20 @@
                 <label class="form-check-label" for="tipoAmonC">Amonestacio per escrit</label><br />
 
                 <input class="form-check-input" type="checkbox" value="" id="tipoAmonD">
-                <label class="form-check-label" for="tipoAmonD">Retirada d'aparells electronics(1)</label><br />
-
-                <div class="form-row">
-                    <div class="form-group col">
-                        <input class="form-check-input  " type="checkbox" value="" id="tipoAmonE">
+                <label class="form-check-label" for="tipoAmonD">Retirada d'aparells electronics(1)</label>
+                <div class="row">
+                    <div class="col">
+                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonE">Privacio del temps de recreacio els dies
+                    </div>
+                    
+                    <div class="col">
+                        <input name="dies" type="text" class="form-control">
+                    </div>
+                </div>
+                <!--
+                <div class="row">
+                    <div class="col">
+                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonE">
                     </div>
                     <div class="col">
                         <label class="form-check-label " for="tipoAmonE">Privacio del temps de recreacio els dies
@@ -62,29 +73,134 @@
                         <input name="dies" type="text" class="form-control"></label>
                     </div>
                 </div>
+                
                 <input class="form-check-input" type="checkbox" value="" id="tipoAmonF">
                 <label class="form-check-label" for="tipoAmonF">Incorporacio a l'aula de convivencia</label><br />
+                -->
+                <div class="row">
+                    <div class="col">
+                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonG">Realitzacio de les següents tasques educadores:
+                    </div>
+                    
+                    <div class="col">
+                        <input name="tasques" type="text" class="form-control">
+                    </div>ruben
 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonG">
+                    <div class="col">
+                        el dies
+                    </div>
+                    
+                    <div class="col">
+                        <input name="dies1" type="text" class="form-control">
+                    </div>
+
+                    <div class="col">
+                        <!--<input class="form-check-input" type="checkbox" value="">i amb l'horari-->
+                        i amb l'horari
+                    </div>
+                    
+                    <div class="col">
+                        <input name="horari" type="text" class="form-control">
+                    </div>
+                </div>
+
+                <!--<input class="form-check-input" type="checkbox" value="" id="tipoAmonG">
                 <label class="form-check-label" for="tipoAmonG">Realitzacio de les següents tasques educadores:
                     <input name="tasques" type="text" class="m-2"><br />
                     el dies <input name="dies1" type="text" class="m-2">i amb l'horari<input name="horari" type="text"
                         v></label><br />
+                -->
 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonH">
-                <label class="form-check-label" for="tipoAmonH">Suspensio del dret a participar en activitats
-                    extraescolars i complementaries des de</label>
-                <input name="suspensio" type="text" class="m-2">fins a<input type="text" class="m-2">(2)<br />
+                <!--
+                    <input class="form-check-input" type="checkbox" value="" id="tipoAmonH">
+                    <label class="form-check-label" for="tipoAmonH">Suspensio del dret a participar en activitats
+                    extraescolars i complementaries des de</label></div>
 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonI">
-                <label class="form-check-label" for="tipoAmonI">suspensio del dret de l'assistencia a les classes de
-                    <input name="assistencia" type="text" class="m-2"><br />
-                    des de <input name="desde" type="text" class="m-2"> fina a <input name="fina" type="text" class="m-2"></label>
+                -->
+
+                <div class="form-row">
+                    <div class="col-16">
+                        <div class="col">
+                         <input class="form-check-input" type="checkbox" value="" id="tipoAmonH" name="extracolars">Suspensio del dret a participar en activitats
+                    extraescolars i complementaries <label class="col-form-label-sm">(2)</label>
+                            </div>
+                    
+                        <div class="col">
+                            <input name="suspensio" type="text" class="m-2" placeholder="des de" ><input type="text" class="form-control m-1" placeholder="Fins a">
+                        </div>
+                    </div>
+              </div>
+
+            <div class="form-row">
+                    <div class="col-16">
+                        <div class="col">
+                                <input class="form-check-input m-2" type="checkbox" value="" id="tipoAmonI">Suspensio del dret de l'assistencia a les classes de
+                        </div>
+                        <div class="col">
+                            <input name="assistencia" type="text" class="form-control m-2 " placeholder="Assignatura/s">
+                        </div>
+                        <div class="col">
+                        <input name="desde" type="text" class="form-control m-1" placeholder="Desde"> 
+                        </div>
+                        <div class="col">
+                            <input name="fina" type="text" class="form-control m-1" placeholder="Fins a">
+                        </div>
+                </div>
             </div>
+            <!--
+            <div class="row">
+                <div class="col">
+                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonI">suspensio del dret de l'assistencia a les classes de    
+                </div>
+                <div class="col">
+                    <input name="assistencia" type="text" class="m-1">
+                </div>
+                <div class="col">
+                    des de <input name="desde" type="text" class="m-1"> 
+                </div>
+                <div class="col">
+                    fins a <input name="fina" type="text" class="m-1">
+                </div>
+            </div>
+            -->
+        </div>
 
-            <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea>
+            
 
-            <p>Tipificacio(3) de l'incident segons l'article 35: <input name="tipificacio" type="text"></p>
+            <p>Tipificacio(3) de l'incident segons l'article 35: <select name="incidente"></p>
+
+                <option value ="">Les faltes de puntualitat injustificades.</option>
+                <option value ="">Les faltes d'assistència injustificades.</option>
+                <option value ="">Els actes que alteren el normal desenvolupament de les activitats del centre educatiu, especialment
+                    els que alteren el normal desenvolupament de les classes.</option>
+                <option value ="">Els actes d'indisciplina</option>
+                <option value ="">Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els membres de la
+                    comunitat educativa.</option>
+                <option value ="">El furt o deteriorament intencionat d'inmobles, materials, documentació o recursos del centre.</option>
+                <option value ="">El furt o deteriorament intencionat dels béns o materials dels membres de la comunitat educativa.</option>
+                <option value ="">Les accions que puguen ser perjudicials per a la integritat i la salut dels membres de la comunitat
+                    educativa.</option>
+                <option value ="">La negativa sistematica a portar el material necessari per al desenvolupament del procés
+                    d'enseyament-aprenentatge.</option>
+                <option value ="">La negativa a traslladar la informació facilitada als pares, mares, tutors, o utores per part del
+                    centre i viceversa.</option>
+                <option value ="">L'alteració o manipulació de la documentació facilitada als pares, mares, tutors, o utores per part
+                    del centre.</option>
+                <option value ="">La suplantació de la personalitat del membres de la comunitat escolar.</option>
+                <option value ="">La utilització inadequada de les tecnologies de la informació i comunicació durant les activitats
+                    que es realitzen en el centre educatiu.</option>
+                <option value ="">L'us de telèfons mòbils, aparells de so i altres aparells electrònics aliens als procés
+                    d'ensenyament-aprenentatge. Durant les activitas que es realitzen en el centre educatiu.</option>
+                <option value ="">Els actes que dificulten o impedisquen el dret i deure de l'estudi dels seus companys y companyes.</option>
+                <option value ="">La incitació o estímul a cometre una falta contrària a les normes de convivència.</option>
+                <option value ="">La negativa al compliment de les mesures correctores adoptades davant de conductes contràries a les
+                    normes de convivència.</option>
+                <option value ="">L'us inadequat de les infraestructures i béns o equips materials del centre.</option>
+                <option value ="">La desobediéncia en el compliment de les normes de carácter propi del centre i que estiguen
+                    incloses en el seu projecte educatiu.</option>
+
+                </select>
+
 
             <p>La comunicacio als pares es fa pels següents mitjans: Telefon <br />
                 <input name="telefon" type="text"><br />
@@ -104,38 +220,7 @@
                 d'audiencia amb el professor que ha imposat la mesura correctora. Per la qual cosa l'horari d'atencio
                 del professor figura al<br />
                 costal del seu nom i el telefon de l'institut en la capçalera.</p>
-            <p>(3) Tipificacio:<br /></p>
-            <ol type="a">
-                <li>Les faltes de puntualitat injustificades.</li>
-                <li>Les faltes d'assistència injustificades.</li>
-                <li>Els actes que alteren el normal desenvolupament de les activitats del centre educatiu, especialment
-                    els que alteren el normal desenvolupament de les classes.</li>
-                <li>Els actes d'indisciplina</li>
-                <li>Els actes d'incorreció o desconsideració, les injúries i les ofenses contra els membres de la
-                    comunitat educativa.</li>
-                <li>El furt o deteriorament intencionat d'inmobles, materials, documentació o recursos del centre.</li>
-                <li>El furt o deteriorament intencionat dels béns o materials dels membres de la comunitat educativa.</li>
-                <li>Les accions que puguen ser perjudicials per a la integritat i la salut dels membres de la comunitat
-                    educativa.</li>
-                <li>La negativa sistematica a portar el material necessari per al desenvolupament del procés
-                    d'enseyament-aprenentatge.</li>
-                <li>La negativa a traslladar la informació facilitada als pares, mares, tutors, o utores per part del
-                    centre i viceversa.</li>
-                <li>L'alteració o manipulació de la documentació facilitada als pares, mares, tutors, o utores per part
-                    del centre.</li>
-                <li>La suplantació de la personalitat del membres de la comunitat escolar.</li>
-                <li>La utilització inadequada de les tecnologies de la informació i comunicació durant les activitats
-                    que es realitzen en el centre educatiu.</li>
-                <li>L'us de telèfons mòbils, aparells de so i altres aparells electrònics aliens als procés
-                    d'ensenyament-aprenentatge. Durant les activitas que es realitzen en el centre educatiu.</li>
-                <li>Els actes que dificulten o impedisquen el dret i deure de l'estudi dels seus companys y companyes.</li>
-                <li>La incitació o estímul a cometre una falta contrària a les normes de convivència.</li>
-                <li>La negativa al compliment de les mesures correctores adoptades davant de conductes contràries a les
-                    normes de convivència.</li>
-                <li>L'us inadequat de les infraestructures i béns o equips materials del centre.</li>
-                <li>La desobediéncia en el compliment de les normes de carácter propi del centre i que estiguen
-                    incloses en el seu projecte educatiu.</li>
-            </ol>
+            
 
     </div>
 
