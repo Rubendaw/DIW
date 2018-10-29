@@ -27,14 +27,14 @@
         <img src="img/laSenia.png" class="m-1">
         <img src="img/direccion.png" class="float-right">
 
-        <h3 class="text-center" >COMUNICACIÓ DE MESURES CORRECTORES</h3>
+        <h3 class="text-center leve" >COMUNICACIÓ DE MESURES CORRECTORES</h3>
 
-        <!---
-            <h3 class="text-center" >COMUNICACIÓ DE CONDUCTES GREUMENT PERJUDICIALS
+        
+            <h3 class="text-center grave" style="display: none" >COMUNICACIÓ DE CONDUCTES GREUMENT PERJUDICIALS
                 PER A LA CONVIVÈNCIA EN EL CENTRe
             </h3>
             
-        -->
+        
 
         <form onsubmit="return onSubmit(this)">
             <p>ALUMNE/A <input name="alumne" type="text" class="m-2"> GRUP <input name="grupo" type="text" class="m-2"></p>
@@ -42,11 +42,12 @@
             <p>Data de l'incident <input name="data" type="text" class="m-2">Hora <input name="hora" type="text" class="m-2">
                 Lloc <input name="lloc" type="text" class="m-2"></p>
 
-                <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea>
+                <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea><br/>
 
-                <!---
-                
-                <p>Tipificacio(1) de l'incident segons l'article 42: <select name="incidenteLeve"></p>
+                Activar faltas graves o leves<input name="camio" id="check" type="checkbox" value="" onchange="javascript:showContent()"><br/>
+               
+
+                <p class="grave" style="display: none">Tipificacio(1) de l'incident segons l'article 42: <select name="incidenteLeve">
 
                 <option value ="">Els actes greus d'indisciplina i les injúries i ofenses contra membres de la comunitat educativa que sobrepassen la incorrecció o la desconsideració previstes en el article 35.</option>
                 <option value ="">L'agressió fisica o moral, les amenaces i coaccions i la discriminació greu a qualsevol membre de la comunitat educativa, així com la falta de respecte greu a la integritat i dignitat personal.</option>
@@ -67,13 +68,14 @@
 
                 </select>
 
+            </p>
 
-                -->
+               
 
-            <p>En aplicacio de l'article 37 del decret 39/08 sobre drets y deures, es comunica al para/mare de l'alumne
+            <p class="leve">En aplicacio de l'article 37 del decret 39/08 sobre drets y deures, es comunica al para/mare de l'alumne
                 <br /> la imposicio de la següent mesura correctora:</p>
 
-            <div class="form-check">
+            <div class="form-check leve">
                 <input class="form-check-input" type="checkbox" value="" id="tipoAmonA">
                 <label class="form-check-label" for="tipoAmonA">Amonestacio verbal</label><br />
 
@@ -96,7 +98,7 @@
                     </div>
                 </div>
             </div>
-                
+          <div class="leve">      
                 <div class="row">
                     <div class="col-16">
                         <div class="col">
@@ -147,10 +149,11 @@
                 </div>
             </div>
         </div>
+    </div>
 
             
 
-            <p>Tipificacio(3) de l'incident segons l'article 35: <select name="incidente"></p>
+            <p class="leve">Tipificacio(3) de l'incident segons l'article 35: <select name="incidente">
 
                 <option value ="">Les faltes de puntualitat injustificades.</option>
                 <option value ="">Les faltes d'assistència injustificades.</option>
@@ -184,36 +187,26 @@
 
                 </select>
 
+            </p>
 
             <p>La comunicacio als pares es fa pels següents mitjans: <br />
                 <input name="telefon" type="text"  placeholder="Telefon"><br />
                 Per correu, Per mig de l'alumne, Amb compareixença del pare/mare/tutor legal.
             </p>
-            <!--
-            <p class="mostrarContenido" style="display:none">Les conductes greument perjudicials per a la convivència en el centre docent només podran ser objecte de mesura disciplinària amb la instrucció prèvia del corresponent expedient disciplinari &#40;art.45.1&#41;</p><br/>
+            
+            <p class="grave" style="display:none">Les conductes greument perjudicials per a la convivència en el centre docent només podran ser objecte de mesura disciplinària amb la instrucció prèvia del corresponent expedient disciplinari &#40;art.45.1&#41;</p><br/>
             <div class="form-group row">
-            -->
+        
             <p>Paiporta,<input name="paiporta" type="text">de<input name="de" type="text">de 201<input name="anio" type="text"></p>
             <br />
 
-            <div class="row">
-                    <div class="col-16">
-                        <div class="col">
-                                 Signatura del professor/a
-                        </div>  
-                        <div class="col">    
-                                <input name="signaturap" type="text" class="form-control m-1"> 
-                        </div>
-                        <div class="col">   
-                                Signatura del cap d'estudis/director
-                        </div>
-                        <div class="col">
-                                <input name="signaturad" type="text" class="form-control m-1">
-                        </div>
-                    </div>
+            <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="director">
+                    <label class="form-check-label" for="tipoAmonA">Signatura del cap d'estudis/director</label><br />
+                   
             </div>
 
-
+            <div class="leve">
             <p>(1) El pare o la mare de l'alumne podra retirar l'aparell del dia següent de rebre esta notificacio en
                 la direccio d'estudis.</p>
             <p>(2) El pare o la mare de l'alumne disposa d'un termini de 10 dies a partir de rebre esta comunicacio per
@@ -221,18 +214,15 @@
                 d'audiencia amb el professor que ha imposat la mesura correctora. Per la qual cosa l'horari d'atencio
                 del professor figura al<br />
                 costal del seu nom i el telefon de l'institut en la capçalera.</p>
-            
-                <input type="submit" value="Enviar formulario">
+            </div>
+                
+            <input type="submit" value="Enviar formulario">
 
         </form>
 
     </div>
 
-    
-
-    
-    
-
+   
 
 </body>
 
