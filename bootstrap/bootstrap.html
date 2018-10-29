@@ -29,6 +29,13 @@
 
         <h3 class="text-center" >COMUNICACIÓ DE MESURES CORRECTORES</h3>
 
+        <!---
+            <h3 class="text-center" >COMUNICACIÓ DE CONDUCTES GREUMENT PERJUDICIALS
+                PER A LA CONVIVÈNCIA EN EL CENTRe
+            </h3>
+            
+        -->
+
         <form onsubmit="return onSubmit(this)">
             <p>ALUMNE/A <input name="alumne" type="text" class="m-2"> GRUP <input name="grupo" type="text" class="m-2"></p>
             <p>PROFESSOR/A <input name="profesor" type="text" class="m-2">Horari d'atenció <input type="text" class="m-2"></p>
@@ -36,6 +43,32 @@
                 Lloc <input name="lloc" type="text" class="m-2"></p>
 
                 <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea>
+
+                <!---
+                
+                <p>Tipificacio(1) de l'incident segons l'article 42: <select name="incidenteLeve"></p>
+
+                <option value ="">Els actes greus d'indisciplina i les injúries i ofenses contra membres de la comunitat educativa que sobrepassen la incorrecció o la desconsideració previstes en el article 35.</option>
+                <option value ="">L'agressió fisica o moral, les amenaces i coaccions i la discriminació greu a qualsevol membre de la comunitat educativa, així com la falta de respecte greu a la integritat i dignitat personal.</option>
+                <option value ="">Les vexacions i humiliacions a qualsevol membre de la comunitat escolar, particularment si tenen un comportament sexista o xenòfon, així com les que es realitzen contra els membres més vulnerables per les seues característiques personals, socials o educatives.</option>
+                <option value ="">L'assetjament escolar.</option>
+                <option value ="">La suplantació de personalitat en actes de vida docent.</option>
+                <option value ="">La falsificació, el deteriorament o la sustracció de documentació acadèmica.</option>
+                <option value ="">Els danys greus causats en els locals, materials o documents del centre o en els bens dels membres de la comunitat educativa.</option>
+                <option value ="">Els actes injustificats que pertorben greument el normal desenvolupament de les activitats del centre.</option>
+                <option value ="">Les actuacions que puguen perjudicar greument la salut i la integritat personal dels membres de la comunitat educativa.</option>
+                <option value ="">La introducció en el centre d'objectes perillosos o substàncies perjudicials per a la salut i la integritat personal dels membres de la comunitat educativa.</option>
+                <option value ="">Les conductes tipificades com a contràries a les normes de convivència del centre educatiu si concorren circumstancies de col-lectivitat o publicitat intencionada per qualsevol mitjà.</option>
+                <option value ="">La incitació o l'estimul a cometre una falta que afecte greument la convivència en el centre.</option>
+                <option value ="">La negativa reiterada al compliment de les mesures educatives correctores adoptades davant de conductes contràries a les normes de convivència.</option>
+                <option value ="">La negativa reiterada al compliment de les mesures disciplinaries adoptades davant de faltes que afecten greument a la convivència en el centre.</option>
+                <option value ="">L'accés indegut o sense autorització a fitxers i servidors del centre.</option>
+                <option value ="">Actes atemptatoris respecte al projecte educatiu, així com al caràcter propi del centre.</option>
+
+                </select>
+
+
+                -->
 
             <p>En aplicacio de l'article 37 del decret 39/08 sobre drets y deures, es comunica al para/mare de l'alumne
                 <br /> la imposicio de la següent mesura correctora:</p>
@@ -53,7 +86,8 @@
                 <input class="form-check-input" type="checkbox" value="" id="tipoAmonD">
                 <label class="form-check-label" for="tipoAmonD">Retirada d'aparells electronics(1)</label>
                 <div class="row">
-                    <div class="col">
+                    <div class="col-16">
+                        <div class="col">
                         <input class="form-check-input" type="checkbox" value="" id="tipoAmonE">Privacio del temps de recreacio els dies
                     </div>
                     
@@ -61,64 +95,29 @@
                         <input name="dies" type="text" class="form-control">
                     </div>
                 </div>
-                <!--
-                <div class="row">
-                    <div class="col">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonE">
-                    </div>
-                    <div class="col">
-                        <label class="form-check-label " for="tipoAmonE">Privacio del temps de recreacio els dies
-                    </div>
-                    <div class="col">
-                        <input name="dies" type="text" class="form-control"></label>
-                    </div>
-                </div>
+            </div>
                 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonF">
-                <label class="form-check-label" for="tipoAmonF">Incorporacio a l'aula de convivencia</label><br />
-                -->
                 <div class="row">
-                    <div class="col">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonG">Realitzacio de les següents tasques educadores:
+                    <div class="col-16">
+                        <div class="col">
+                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonG" name="tasques">Realitzacio de les següents tasques educadores:
                     </div>
                     
                     <div class="col">
-                        <input name="tasques" type="text" class="form-control">
-                    </div>ruben
-
-                    <div class="col">
-                        el dies
-                    </div>
-                    
-                    <div class="col">
-                        <input name="dies1" type="text" class="form-control">
+                        <input name="tasques" type="text" class="form-control m-1" >
                     </div>
 
                     <div class="col">
-                        <!--<input class="form-check-input" type="checkbox" value="">i amb l'horari-->
-                        i amb l'horari
+                        <input name="dies1" type="text" class="form-control m-1" placeholder="el dies">
                     </div>
                     
                     <div class="col">
-                        <input name="horari" type="text" class="form-control">
+                        <input name="horari" type="text" class="form-control m-1" placeholder="i amb l'horari">
                     </div>
                 </div>
+            </div>
 
-                <!--<input class="form-check-input" type="checkbox" value="" id="tipoAmonG">
-                <label class="form-check-label" for="tipoAmonG">Realitzacio de les següents tasques educadores:
-                    <input name="tasques" type="text" class="m-2"><br />
-                    el dies <input name="dies1" type="text" class="m-2">i amb l'horari<input name="horari" type="text"
-                        v></label><br />
-                -->
-
-                <!--
-                    <input class="form-check-input" type="checkbox" value="" id="tipoAmonH">
-                    <label class="form-check-label" for="tipoAmonH">Suspensio del dret a participar en activitats
-                    extraescolars i complementaries des de</label></div>
-
-                -->
-
-                <div class="form-row">
+                <div class="row">
                     <div class="col-16">
                         <div class="col">
                          <input class="form-check-input" type="checkbox" value="" id="tipoAmonH" name="extracolars">Suspensio del dret a participar en activitats
@@ -126,18 +125,18 @@
                             </div>
                     
                         <div class="col">
-                            <input name="suspensio" type="text" class="m-2" placeholder="des de" ><input type="text" class="form-control m-1" placeholder="Fins a">
+                            <input name="suspensio" type="text" class="m-1" placeholder="des de" ><input type="text" class="form-control m-1" placeholder="Fins a">
                         </div>
                     </div>
               </div>
 
-            <div class="form-row">
+            <div class="row">
                     <div class="col-16">
                         <div class="col">
-                                <input class="form-check-input m-2" type="checkbox" value="" id="tipoAmonI">Suspensio del dret de l'assistencia a les classes de
+                                <input class="form-check-input" type="checkbox" value="" id="tipoAmonI">Suspensio del dret de l'assistencia a les classes de
                         </div>
                         <div class="col">
-                            <input name="assistencia" type="text" class="form-control m-2 " placeholder="Assignatura/s">
+                            <input name="assistencia" type="text" class="form-control m-1 " placeholder="Assignatura/s">
                         </div>
                         <div class="col">
                         <input name="desde" type="text" class="form-control m-1" placeholder="Desde"> 
@@ -147,22 +146,6 @@
                         </div>
                 </div>
             </div>
-            <!--
-            <div class="row">
-                <div class="col">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonI">suspensio del dret de l'assistencia a les classes de    
-                </div>
-                <div class="col">
-                    <input name="assistencia" type="text" class="m-1">
-                </div>
-                <div class="col">
-                    des de <input name="desde" type="text" class="m-1"> 
-                </div>
-                <div class="col">
-                    fins a <input name="fina" type="text" class="m-1">
-                </div>
-            </div>
-            -->
         </div>
 
             
@@ -202,15 +185,33 @@
                 </select>
 
 
-            <p>La comunicacio als pares es fa pels següents mitjans: Telefon <br />
-                <input name="telefon" type="text"><br />
+            <p>La comunicacio als pares es fa pels següents mitjans: <br />
+                <input name="telefon" type="text"  placeholder="Telefon"><br />
                 Per correu, Per mig de l'alumne, Amb compareixença del pare/mare/tutor legal.
             </p>
+            <!--
+            <p class="mostrarContenido" style="display:none">Les conductes greument perjudicials per a la convivència en el centre docent només podran ser objecte de mesura disciplinària amb la instrucció prèvia del corresponent expedient disciplinari &#40;art.45.1&#41;</p><br/>
+            <div class="form-group row">
+            -->
             <p>Paiporta,<input name="paiporta" type="text">de<input name="de" type="text">de 201<input name="anio" type="text"></p>
             <br />
 
-            <p>Signatura del professro/a Signatura del cap d'estudis/director</p>
-            <input name="signaturap" type="text"> <input name="signaturad" type="text">
+            <div class="row">
+                    <div class="col-16">
+                        <div class="col">
+                                 Signatura del professor/a
+                        </div>  
+                        <div class="col">    
+                                <input name="signaturap" type="text" class="form-control m-1"> 
+                        </div>
+                        <div class="col">   
+                                Signatura del cap d'estudis/director
+                        </div>
+                        <div class="col">
+                                <input name="signaturad" type="text" class="form-control m-1">
+                        </div>
+                    </div>
+            </div>
 
 
             <p>(1) El pare o la mare de l'alumne podra retirar l'aparell del dia següent de rebre esta notificacio en
@@ -221,12 +222,16 @@
                 del professor figura al<br />
                 costal del seu nom i el telefon de l'institut en la capçalera.</p>
             
+                <input type="submit" value="Enviar formulario">
+
+        </form>
 
     </div>
 
-    <input type="submit" value="Submit">
+    
 
-    </form>
+    
+    
 
 
 </body>
