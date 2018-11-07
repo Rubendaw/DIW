@@ -1,6 +1,7 @@
 function onSubmit( form ){
     
-    var data = JSON.stringify( $(form).serializeArray() ); //  <-----------
+    var data = JSON.stringify( $(form).serializeArray() );
+    console.log("Angel"); //  <-----------
     console.log( data );
     return false; //don't submit
   }
