@@ -14,8 +14,35 @@ exports.create = (req,res)=>{
     const incidencia = new Incidencia({
         alumne: req.body.alumne || "Sin Nombre",
         profesor: req.body.profesor || "Sin profesion",
-        lloc: req.body.lloc,
-        data: req.body.data 
+        lloc: req.body.lloc || "Sin lugar",
+        data: req.body.data || "Sin data",
+        grupo: req.body.grupo || "Sin grupo",
+        horario: req.body.horario || "Sin horario",
+        hora: req.body.hora || "Sin hora",
+        cambio: req.body.cambio || "Sin cambio",
+        incidenteLeve: req.body.incidenteLeve || "Sin incidenteLeve",
+        dies: req.body.dies || "Sin dies",
+        tasques: req.body.tasques || "Sin tasques",
+        tasque: req.body.tasque || "Sin tasque",
+        dies1: req.body.dies1 || "Sin dies1",
+        horari: req.body.horari || "Sin horari",
+        extracolars: req.body.extracolars || "Sin extracolars",
+        suspensio: req.body.suspensio || "Sin suspensio",
+        assistencia: req.body.assistencia || "Sin assistencia",
+        desde: req.body.desde || "Sin desde",
+        fina: req.body.fina || "Sin fina",
+        incidente: req.body.incidente || "Sin incidente",
+        telefon: req.body.telefon || "Sin telefon",
+        paiporta: req.body.paiporta || "Sin paiporta",
+        de: req.body.de || "Sin de",
+        anio: req.body.anio || "Sin anio",
+        director: req.body.director || "Sin director"
+        
+
+
+
+
+        
     })
 
     incidencia.save().then(data =>{
