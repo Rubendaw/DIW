@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const path=require('path');
 
 const app = express();
 
@@ -35,6 +36,9 @@ require('./app/routes/incidencia.routes.js')(app);
 app.get('/',(req,res)=>{
     res.json({"message":"Estas en el cerebro de la bestia, malandrin"});
 });
+
+// Sirviendo ficheros desde el servidor
+app.use(express.static(path.join(__dirname,'formulario')));
 
 
 
