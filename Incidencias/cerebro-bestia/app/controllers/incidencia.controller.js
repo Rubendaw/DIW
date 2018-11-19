@@ -20,7 +20,7 @@ exports.create = (req,res)=>{
         horario: req.body.horario || "Sin horario",
         hora: req.body.hora || "Sin hora",
         cambio: req.body.cambio || "Sin cambio",
-        incidenteLeve: req.body.incidenteLeve || "Sin incidenteLeve",
+        incidentegrave: req.body.incidentegrave || "Sin incidentgrave",
         tip_42_a: req.body.tip_42_a || "Sin Nombre",
         tip_42_b: req.body.tip_42_b || "Sin Nombre",
         tip_42_c: req.body.tip_42_c || "Sin Nombre",
@@ -102,8 +102,6 @@ exports.create = (req,res)=>{
     });
 };
 
-
-
 // Obtener todos los investigadores
 exports.findAll = (req,res) => {
 
@@ -114,7 +112,7 @@ exports.findAll = (req,res) => {
                 message: err.message || " Algo fue mal mientras los capturabamos a todos"
             });
         });
-
+z
 };
 
 
