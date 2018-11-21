@@ -37,10 +37,10 @@
         
 
         <form action="http://localhost:3000/incidencias" method="POST">
-            <p>ALUMNE/A <input name="alumne" type="text" class="m-2"> GRUP <input name="grupo" type="text" class="m-2"></p>
-            <p>PROFESSOR/A <input name="profesor" type="text" class="m-2">Horari d'atenció <input name="horario" type="time" class="m-2"></p>
+            <p><input name="alumne" type="text" class="m-2" placeholder="ALUMNE/A"><input name="grupo" type="text" class="m-2" placeholder="GRUP"></p>
+            <p><input name="profesor" type="text" class="m-2" placeholder="PROFESSOR/A">Horari d'atenció <input name="horario" type="time" class="m-2"></p>
             <p>Data de l'incident <input name="data" type="date" class="m-2">Hora <input name="hora" type="time" class="m-2">
-                Lloc <input name="lloc" type="text" class="m-2"></p>
+                <input name="lloc" type="text" class="m-2" placeholder="Lloc"></p>
 
                 <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea><br/>
 
@@ -49,9 +49,9 @@
 
                 <p class="grave" style="display: none">
                     Tipificacio(1) de l'incident segons l'article 42 de el demonio asesino: 
-                    <select name="incidentegrave">
+                    <select name="incidentegrave" class="m-1">
                 <option value="">...</option>
-                <option value="tip_42_a1">Els actes greus d'indisciplina i les injúries i ofenses contra membres de la comunitat educativa que sobrepassen la incorrecció o la desconsideració previstes en el article 35.</option>
+                <option value="tip_42_a">Els actes greus d'indisciplina i les injúries i ofenses contra membres de la comunitat educativa que sobrepassen la incorrecció o la desconsideració previstes en el article 35.</option>
                 <option value="tip_42_b">L'agressió fisica o moral, les amenaces i coaccions i la discriminació greu a qualsevol membre de la comunitat educativa, així com la falta de respecte greu a la integritat i dignitat personal.</option>
                 <option value="tip_42_c">Les vexacions i humiliacions a qualsevol membre de la comunitat escolar, particularment si tenen un comportament sexista o xenòfon, així com les que es realitzen contra els membres més vulnerables per les seues característiques personals, socials o educatives.</option>
                 <option value="tip_42_d">L'assetjament escolar.</option>
@@ -77,7 +77,7 @@
                 <br /> la imposicio de la següent mesura correctora:</p>
 
             <div class="form-check leve">
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonA" name="tipoAmonA">
+                <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonA" name="tipoAmonA">
                 <label class="form-check-label" for="tipoAmonA">Amonestacio verbal</label><br />
 
                 <input class="form-check-input" type="checkbox" value="" id="tipoAmonB" name="tipoAmonB">
@@ -104,21 +104,21 @@
                     <div class="col-16">
                         <div class="col">
                         <input class="form-check-input" type="checkbox" value="" id="tipoAmonG" name="tasques" name="tipoAmonG">Realitzacio de les següents tasques educadores:
-                    </div>
+                        </div>
                     
-                    <div class="col">
-                        <input name="tasque" type="text" class="form-control m-1" >
-                    </div>
+                        <div class="col">
+                            <input name="tasque" type="text" class="form-control m-1" >
+                        </div>
 
-                    <div class="col">
-                        <input name="dies1" type="text" class="form-control m-1" placeholder="el dies">
-                    </div>
+                        <div class="col">
+                            <input name="dies1" type="text" class="form-control m-1" placeholder="el dies">
+                        </div>
                     
-                    <div class="col">
-                        <input name="horari" type="text" class="form-control m-1" placeholder="i amb l'horari">
+                        <div class="col">
+                            <input name="horari" type="text" class="form-control m-1" placeholder="i amb l'horari">
+                        </div>
                     </div>
                 </div>
-            </div>
 
                 <div class="row">
                     <div class="col-16">
@@ -128,7 +128,10 @@
                             </div>
                     
                         <div class="col">
-                            <input name="suspensio" type="text" class="m-1" placeholder="des de" ><input type="text" class="form-control m-1" placeholder="Fins a">
+                            <input name="suspensio" type="text" class="m-1" placeholder="des de" >
+                        </div>
+                        <div class="col">
+                            <input name ="finsa" type="text" class="m-1" placeholder="Fins a">
                         </div>
                     </div>
               </div>
@@ -155,7 +158,7 @@
             
 
             <p class="leve">Tipificacio(3) de l'incident segons l'article 35 del infierno: 
-                <select name="incidente">
+                <select name="incidente" class="form-control">
 
                 <option value="tip_35_a">Les faltes de puntualitat injustificades.</option>
                 <option value="tip_35_b">Les faltes d'assistència injustificades.</option>
