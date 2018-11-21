@@ -11,7 +11,9 @@ exports.create = (req,res)=>{
         });
     }
 
-    // 
+    // Aprovechando que javascript tiene tipado dinamico
+    // sobreescribimos el valor de req.body.tipoAmonA que
+    // viene como "string" para que sea un booleano.
     if (req.body.tipoAmonA =='marcado'){
         req.body.tipoAmonA = true;
     }else{
