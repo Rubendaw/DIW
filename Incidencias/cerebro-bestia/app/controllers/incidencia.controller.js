@@ -20,6 +20,72 @@ exports.create = (req,res)=>{
         req.body.tipoAmonA = false;
     }
 
+    if (req.body.tipoAmonB =='marcado'){
+        req.body.tipoAmonB = true;
+    }else{
+        req.body.tipoAmonB = false;
+    }
+
+    if (req.body.tipoAmonC =='marcado'){
+        req.body.tipoAmonC = true;
+    }else{
+        req.body.tipoAmonC = false;
+    }
+
+    if (req.body.tipoAmonD =='marcado'){
+        req.body.tipoAmonD = true;
+    }else{
+        req.body.tipoAmonD = false;
+    }
+
+    if (req.body.tipoAmonE =='marcado'){
+        req.body.tipoAmonE = true;
+    }else{
+        req.body.tipoAmonE = false;
+    }
+
+    if (req.body.tipoAmonG =='marcado'){
+        req.body.tipoAmonG = true;
+    }else{
+        req.body.tipoAmonG = false;
+    }
+
+    if (req.body.tipoAmonH =='marcado'){
+        req.body.tipoAmonH = true;
+    }else{
+        req.body.tipoAmonH = false;
+    }
+
+    if (req.body.tipoAmonI =='marcado'){
+        req.body.tipoAmonI = true;
+    }else{
+        req.body.tipoAmonI = false;
+    }
+
+    if (req.body.correu =='marcado'){
+        req.body.correu = true;
+    }else{
+        req.body.correu = false;
+    }
+
+    if (req.body.alum =='marcado'){
+        req.body.alum = true;
+    }else{
+        req.body.alum = false;
+    }
+
+    if (req.body.tutor =='marcado'){
+        req.body.tutor = true;
+    }else{
+        req.body.tutor = false;
+    }
+
+    if (req.body.director =='marcado'){
+        req.body.director = true;
+    }else{
+        req.body.director = false;
+    }
+
 
 
     const incidencia = new Incidencia({
@@ -88,14 +154,14 @@ exports.create = (req,res)=>{
         tip_35_r: req.body.tip_35_r || "Sin Nombre",
         tip_35_s: req.body.tip_35_s || "Sin Nombre",
         telefon: req.body.telefon || "Sin telefon",
-        correu: req.body.correu || "Sin Nombre",
-        alum: req.body.alum || "Sin Nombre",
-        tutor: req.body.tutor || "Sin Nombre",
-        conductes: req.body.conductes || "Sin Nombre",
+        correu: req.body.correu || false,
+        alum: req.body.alum || false,
+        tutor: req.body.tutor || false,
+        conductes: req.body.conductes || "Sin conductes",
         paiporta: req.body.paiporta || "Sin paiporta",
         de: req.body.de || "Sin de",
         anio: req.body.anio || "Sin anio",
-        director: req.body.director || "Sin director"
+        director: req.body.director || false
         
 
 

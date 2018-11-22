@@ -15,6 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="bootstrap.js"></script>
+    <link rel="stylesheet" href="boot.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
 
                 <p class="grave" style="display: none">
                     Tipificacio(1) de l'incident segons l'article 42 de el demonio asesino: 
-                    <select name="incidentegrave" class="m-1">
+                    <select name="incidentegrave" class="form-control">
                 <option value="">...</option>
                 <option value="tip_42_a">Els actes greus d'indisciplina i les injúries i ofenses contra membres de la comunitat educativa que sobrepassen la incorrecció o la desconsideració previstes en el article 35.</option>
                 <option value="tip_42_b">L'agressió fisica o moral, les amenaces i coaccions i la discriminació greu a qualsevol membre de la comunitat educativa, així com la falta de respecte greu a la integritat i dignitat personal.</option>
@@ -80,18 +81,18 @@
                 <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonA" name="tipoAmonA">
                 <label class="form-check-label" for="tipoAmonA">Amonestacio verbal</label><br />
 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonB" name="tipoAmonB">
+                <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonB" name="tipoAmonB">
                 <label class="form-check-label" for="tipoAmonB">Compareixença davant el cap d'estudis/director</label><br />
 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonC" name="tipoAmonC">
+                <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonC" name="tipoAmonC">
                 <label class="form-check-label" for="tipoAmonC">Amonestacio per escrit</label><br />
 
-                <input class="form-check-input" type="checkbox" value="" id="tipoAmonD" name="tipoAmonD">
+                <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonD" name="tipoAmonD">
                 <label class="form-check-label" for="tipoAmonD">Retirada d'aparells electronics(1)</label>
                 <div class="row">
                     <div class="col-16">
                         <div class="col">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonE" name="tipoAmonE">Privacio del temps de recreacio els dies
+                        <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonE" name="tipoAmonE">Privacio del temps de recreacio els dies
                     </div>
                     
                     <div class="col">
@@ -103,7 +104,7 @@
                 <div class="row">
                     <div class="col-16">
                         <div class="col">
-                        <input class="form-check-input" type="checkbox" value="" id="tipoAmonG" name="tasques" name="tipoAmonG">Realitzacio de les següents tasques educadores:
+                        <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonG" name="tasques" name="tipoAmonG">Realitzacio de les següents tasques educadores:
                         </div>
                     
                         <div class="col">
@@ -123,7 +124,7 @@
                 <div class="row">
                     <div class="col-16">
                         <div class="col">
-                         <input class="form-check-input" type="checkbox" value="" id="tipoAmonH" name="tipoAmonH">Suspensio del dret a participar en activitats
+                         <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonH" name="tipoAmonH">Suspensio del dret a participar en activitats
                     extraescolars i complementaries <label class="col-form-label-sm">(2)</label>
                             </div>
                     
@@ -139,7 +140,7 @@
             <div class="row">
                     <div class="col-16">
                         <div class="col">
-                                <input class="form-check-input" type="checkbox" value="" id="tipoAmonI" name="tipoAmonI">Suspensio del dret de l'assistencia a les classes de
+                                <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonI" name="tipoAmonI">Suspensio del dret de l'assistencia a les classes de
                         </div>
                         <div class="col">
                             <input name="assistencia" type="text" class="form-control m-1 " placeholder="Assignatura/s">
@@ -199,17 +200,17 @@
                 
             </p>
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="correu" >
+                    <input class="form-check-input" type="checkbox" value="marcado" id="correu" >
                     <label class="form-check-label" for="tipoAmoncorreu" name="correu">Per correu</label>
                    
             </div>
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="alum" >
+                    <input class="form-check-input" type="checkbox" value="marcado" id="alum" >
                     <label class="form-check-label" for="tipoAmonalum" name="alum">Per mig de l'alumne</label>
                    
             </div>
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="tutor" >
+                    <input class="form-check-input" type="checkbox" value="marcado" id="tutor" >
                     <label class="form-check-label" for="tipoAmontutor" name="tutor">Amb compareixença del pare/mare/tutor legal</label>
                    
             </div>
@@ -222,7 +223,7 @@
             </div>
 
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="director" name="director">
+                    <input class="form-check-input" type="checkbox" value="marcado" id="director" name="director">
                     <p class="form-check-label" for="tipoAmondirector">Signatura del cap d'estudis/director</p>
                    
             </div>
