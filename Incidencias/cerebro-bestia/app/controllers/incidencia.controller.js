@@ -182,14 +182,14 @@ exports.create = (req,res)=>{
 // Obtener todos los investigadores
 exports.findAll = (req,res) => {
 
-        Incidencias.find().then(incidencias=>{
+        Incidencia.find().then(incidencias=>{
             res.send(incidencias);
         }).catch(err=>{
             res.status(500).send({
                 message: err.message || " Algo fue mal mientras los capturabamos a todos"
             });
         });
-z
+
 };
 
 
@@ -254,7 +254,7 @@ exports.update = (req, res) => {
         tip_42_n: req.body.tip_42_n || "Sin Incidencia",
         tip_42_o: req.body.tip_42_o || "Sin Incidencia",
         tip_42_p: req.body.tip_42_p || "Sin Incidencia",
-        leve: req.body.leve || "Sin falta leve",
+        leve: req.body.leve || "Sin ",
         tipoAmonA: req.body.tipoAmonA || false,
         tipoAmonB: req.body.tipoAmonB || false,
         tipoAmonC: req.body.tipoAmonC || false,
@@ -274,25 +274,25 @@ exports.update = (req, res) => {
         desde: req.body.desde || "Sin desde",
         fina: req.body.fina || "Sin fina",
         incidente: req.body.incidente || "Sin incidente",
-        tip_35_a: req.body.tip_35_a || "Sin Incidencia2",
-        tip_35_b: req.body.tip_35_b || "Sin Incidencia2",
-        tip_35_c: req.body.tip_35_c || "Sin Incidencia2",
-        tip_35_d: req.body.tip_35_d || "Sin Incidencia2",
-        tip_35_e: req.body.tip_35_e || "Sin Incidencia2",
-        tip_35_f: req.body.tip_35_f || "Sin Incidencia2",
-        tip_35_g: req.body.tip_35_g || "Sin Incidencia2",
-        tip_35_h: req.body.tip_35_h || "Sin Incidencia2",
-        tip_35_i: req.body.tip_35_i || "Sin Incidencia2",
-        tip_35_j: req.body.tip_35_j || "Sin Incidencia2",
-        tip_35_k: req.body.tip_35_k || "Sin Incidencia2",
-        tip_35_l: req.body.tip_35_l || "Sin Incidencia2",
-        tip_35_m: req.body.tip_35_m || "Sin Incidencia2",
-        tip_35_n: req.body.tip_35_n || "Sin Incidencia2",
-        tip_35_o: req.body.tip_35_o || "Sin Incidencia2",
-        tip_35_p: req.body.tip_35_p || "Sin Incidencia2",
-        tip_35_q: req.body.tip_35_q || "Sin Incidencia2",
-        tip_35_r: req.body.tip_35_r || "Sin Incidencia2",
-        tip_35_s: req.body.tip_35_s || "Sin Incidencia2",
+        tip_35_a: req.body.tip_35_a || "Sin Nombre",
+        tip_35_b: req.body.tip_35_b || "Sin Nombre",
+        tip_35_c: req.body.tip_35_c || "Sin Nombre",
+        tip_35_d: req.body.tip_35_d || "Sin Nombre",
+        tip_35_e: req.body.tip_35_e || "Sin Nombre",
+        tip_35_f: req.body.tip_35_f || "Sin Nombre",
+        tip_35_g: req.body.tip_35_g || "Sin Nombre",
+        tip_35_h: req.body.tip_35_h || "Sin Nombre",
+        tip_35_i: req.body.tip_35_i || "Sin Nombre",
+        tip_35_j: req.body.tip_35_j || "Sin Nombre",
+        tip_35_k: req.body.tip_35_k || "Sin Nombre",
+        tip_35_l: req.body.tip_35_l || "Sin Nombre",
+        tip_35_m: req.body.tip_35_m || "Sin Nombre",
+        tip_35_n: req.body.tip_35_n || "Sin Nombre",
+        tip_35_o: req.body.tip_35_o || "Sin Nombre",
+        tip_35_p: req.body.tip_35_p || "Sin Nombre",
+        tip_35_q: req.body.tip_35_q || "Sin Nombre",
+        tip_35_r: req.body.tip_35_r || "Sin Nombre",
+        tip_35_s: req.body.tip_35_s || "Sin Nombre",
         telefon: req.body.telefon || "Sin telefon",
         correu: req.body.correu || "Sin Nombre",
         alum: req.body.alum || "Sin Nombre",
