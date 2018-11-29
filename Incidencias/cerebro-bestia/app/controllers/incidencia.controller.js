@@ -1,4 +1,5 @@
 const Incidencia = require('../models/incidencia.model.js');
+const path=require('path');
 
 // Crear y salvar
 exports.create = (req,res)=>{
@@ -171,7 +172,7 @@ exports.create = (req,res)=>{
     })
 
     incidencia.save().then(data =>{
-        res.send(data);
+        res.sendFile(path.join(__dirname,'../../formulario/listar.html'));
     }).catch(err => {
         res.status(500).send({
             message: err.message|| "Something was wrong creating Incidencia"
