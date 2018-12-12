@@ -196,22 +196,22 @@ exports.findAll = (req,res) => {
 
 // Obtener un investigador por Id
 exports.findOne = (req,res) => {
-    Investigador.findById(req.params.investigadorId)
-    .then(investigador=>{
-        if (!investigador){
+    Incidencia.findById(req.params.incidenciaId)
+    .then(incidencia=>{
+        if (!incidencia){
             return res.status(404).send({
-                message: "Investigador NOT FOUND con ID " +req.params.investigadorId
+                message: "Incidencia NOT FOUND con ID " +req.params.incidenciaId
             });
             }
-            res.send(investigador);
+            res.send(incidencia);
         }).catch(err=>{
             if(err.kind === 'ObjectId'){
                 return res.status(404).send({
-                    message: "Investigador no encontrado con ese id :" +req.params.investigadorId
+                    message: "Investigador no encontrado con ese id :" +req.params.incidenciaId
                 });
             }
              return res.status(500).send({
-                message: "Tenemos NOSOTROS problemas con ese id :" +req.params.investigadorId
+                message: "Tenemos NOSOTROS problemas con ese id :" +req.params.incidenciaId
              });
         });
     };

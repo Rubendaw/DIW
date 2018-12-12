@@ -4,7 +4,7 @@ $.getJSON( "incidencias", function( data ) {
 	console.log(key);
    var fila="<tr><td>" + val.alumne + 
    "</td><td> " + val.grupo + "</td><td> " + val.profesor + "</td><td> " + val.horario
-    + "</td><td> " + val.data + "</td><td> " + val.hora + " </td><td> <a href='bootstrap.html'>Ver Incidencia</a>" + "</td></tr>";
+    + "</td><td> " + val.data + "</td><td> " + val.hora + " </td><td> <a href='bootstrap2.html?"+ val._id + "'>Ver Incidencia</a>" + "</td></tr>";
     
    
     
@@ -17,3 +17,17 @@ $.getJSON( "incidencias", function( data ) {
     html: items.join( "" )
   })*/
 });
+
+
+function rellenarFormulario(){
+
+  
+
+}
+
+
+function guardarFormulario(){
+
+  
+
+}
