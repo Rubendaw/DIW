@@ -2,11 +2,32 @@ $.getJSON( "incidencias", function( data ) {
   var items = [];
     $.each( data, function( key, val ) {
 	console.log(key);
-    items.push( "<li id='" + key + "' class='list-group-item'>" + val.alumne + "</li>" );
+   var fila="<tr><td>" + val.alumne + 
+   "</td><td> " + val.grupo + "</td><td> " + val.profesor + "</td><td> " + val.horario
+    + "</td><td> " + val.data + "</td><td> " + val.hora + " </td><td> <a href='bootstrap2.html?"+ val._id + "'>Ver Incidencia</a>" + "</td></tr>";
+    
+   
+    
+    $( "#tablalistar" ).append(fila);
+
+
   });
- 
-  $( "<ul/>", {
-    "class": "list-group",
+ /*
+  $( "<td/>", {
     html: items.join( "" )
-  }).appendTo( "#divLista" );
+  })*/
 });
+
+
+function rellenarFormulario(){
+
+  
+
+}
+
+
+function guardarFormulario(){
+
+  
+
+}

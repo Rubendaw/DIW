@@ -1,4 +1,5 @@
 const Incidencia = require('../models/incidencia.model.js');
+const path=require('path');
 
 // Crear y salvar
 exports.create = (req,res)=>{
@@ -171,7 +172,7 @@ exports.create = (req,res)=>{
     })
 
     incidencia.save().then(data =>{
-        res.send(data);
+        res.sendFile(path.join(__dirname,'../../formulario/listar.html'));
     }).catch(err => {
         res.status(500).send({
             message: err.message|| "Something was wrong creating Incidencia"
@@ -195,22 +196,22 @@ exports.findAll = (req,res) => {
 
 // Obtener un investigador por Id
 exports.findOne = (req,res) => {
-    Investigador.findById(req.params.investigadorId)
-    .then(investigador=>{
-        if (!investigador){
+    Incidencia.findById(req.params.incidenciaId)
+    .then(incidencia=>{
+        if (!incidencia){
             return res.status(404).send({
-                message: "Investigador NOT FOUND con ID " +req.params.investigadorId
+                message: "Incidencia NOT FOUND con ID " +req.params.incidenciaId
             });
             }
-            res.send(investigador);
+            res.send(incidencia);
         }).catch(err=>{
             if(err.kind === 'ObjectId'){
                 return res.status(404).send({
-                    message: "Investigador no encontrado con ese id :" +req.params.investigadorId
+                    message: "Investigador no encontrado con ese id :" +req.params.incidenciaId
                 });
             }
              return res.status(500).send({
-                message: "Tenemos NOSOTROS problemas con ese id :" +req.params.investigadorId
+                message: "Tenemos NOSOTROS problemas con ese id :" +req.params.incidenciaId
              });
         });
     };

@@ -13,6 +13,31 @@
 
 <script src="incidenciasListar.js"></script>
   </head>
+  <style>
+  
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    
+}
+#hora{
+  
+  width: 10%;
+
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+  
+  </style>
 
   <body>
     <div class="jumbotron jumbotron-fluid">
@@ -23,6 +48,22 @@
     
 	<div class="container-fluid">
 	  <div id="divLista">
+
+
+      <table id="tablalistar">
+        <tr>
+          <th>Alumno</th>
+          <th>Grupo</th>
+          <th>Profesor</th>
+          <th id="hora">Hora de la incidencia</th>
+          <th>Fecha</th>
+          <th>Hora</th>
+          <th>Editar</th>
+        </tr>
+
+
+
+      </table>
 
 	    </div>
       
