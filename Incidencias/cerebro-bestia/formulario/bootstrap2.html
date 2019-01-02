@@ -39,7 +39,7 @@
             
         
 
-        <form action="http://localhost:3000/incidencias" method="POST">
+        <form action="incidencias" method="POST">
             <p><input name="alumne" type="text" class="m-2" placeholder="ALUMNE/A"><input name="grupo" type="text" class="m-2" placeholder="GRUP"></p>
             <p><input name="profesor" type="text" class="m-2" placeholder="PROFESSOR/A">Horari d'atenció <input name="horario" type="time" class="m-2"></p>
             <p>Data de l'incident <input name="data" type="date" class="m-2">Hora <input name="hora" type="time" class="m-2">
@@ -163,6 +163,7 @@
             <p class="leve">Tipificacio(3) de l'incident segons l'article 35 del infierno: 
                 <select name="incidente" class="form-control">
 
+                <option value="nada">Rellena este campo</option>
                 <option value="tip_35_a">Les faltes de puntualitat injustificades.</option>
                 <option value="tip_35_b">Les faltes d'assistència injustificades.</option>
                 <option value="tip_35_c">Els actes que alteren el normal desenvolupament de les activitats del centre educatiu, especialment

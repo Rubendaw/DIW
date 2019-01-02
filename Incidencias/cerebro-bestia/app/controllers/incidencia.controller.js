@@ -97,6 +97,7 @@ exports.create = (req,res)=>{
         grupo: req.body.grupo || "Sin grupo",
         horario: req.body.horario || "Sin horario",
         hora: req.body.hora || "Sin hora",
+        descripcion:req.body.descripcion || "Sin descripcion",
         cambio: req.body.cambio || "Sin cambio",
         incidentegrave: req.body.incidentegrave || "Sin incidentgrave",
         tip_42_a: req.body.tip_42_a || "Sin Incidencia",
@@ -135,6 +136,7 @@ exports.create = (req,res)=>{
         desde: req.body.desde || "Sin desde",
         fina: req.body.fina || "Sin fina",
         incidente: req.body.incidente || "Sin incidente",
+        nada: req.body.nada || "campo sin rellenar",
         tip_35_a: req.body.tip_35_a || "Sin Incidencias2",
         tip_35_b: req.body.tip_35_b || "Sin Incidencias2",
         tip_35_c: req.body.tip_35_c || "Sin Incidencias2",
@@ -179,6 +181,8 @@ exports.create = (req,res)=>{
         });
     });
 };
+
+
 
 // Obtener todos los investigadores
 exports.findAll = (req,res) => {
@@ -237,6 +241,7 @@ exports.update = (req, res) => {
         grupo: req.body.grupo || "Sin grupo",
         horario: req.body.horario || "Sin horario",
         hora: req.body.hora || "Sin hora",
+        descripcion:req.body.descripcion || "Sin descripcion",
         cambio: req.body.cambio || "Sin cambio",
         incidentegrave: req.body.incidentegrave || "Sin incidentgrave",
         tip_42_a: req.body.tip_42_a || "Sin Incidencia",
@@ -275,6 +280,7 @@ exports.update = (req, res) => {
         desde: req.body.desde || "Sin desde",
         fina: req.body.fina || "Sin fina",
         incidente: req.body.incidente || "Sin incidente",
+        nada: req.body.nada || "campo sin rellenar",
         tip_35_a: req.body.tip_35_a || "Sin Nombre",
         tip_35_b: req.body.tip_35_b || "Sin Nombre",
         tip_35_c: req.body.tip_35_c || "Sin Nombre",
@@ -303,7 +309,9 @@ exports.update = (req, res) => {
         de: req.body.de || "Sin de",
         anio: req.body.anio || "Sin anio",
         director: req.body.director || "Sin director"
-    }, {new: true})
+    },
+    
+    {new: true})
     .then(investigador => {
         if(!investigador) {
             return res.status(404).send({

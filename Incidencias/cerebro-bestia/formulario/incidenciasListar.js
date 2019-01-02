@@ -18,7 +18,7 @@ $.getJSON( "incidencias", function( data ) {
   })*/
 });
 
-
+//Con los datos guardados rellenamos el formulario
 function rellenarFormulario(){
 
   
@@ -26,6 +26,7 @@ function rellenarFormulario(){
 }
 
 
+//tengo que guardar el formulario y mostrarlos en el segudno html
 function guardarFormulario(){
 
   
