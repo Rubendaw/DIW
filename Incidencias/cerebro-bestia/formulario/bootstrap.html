@@ -37,13 +37,13 @@
             
         
 
-        <form action="http://localhost:3000/incidencias" method="POST">
+        <form action="incidencias" method="POST">
             <p><input name="alumne" type="text" class="m-2" placeholder="ALUMNE/A"><input name="grupo" type="text" class="m-2" placeholder="GRUP"></p>
             <p><input name="profesor" type="text" class="m-2" placeholder="PROFESSOR/A">Horari d'atenció <input name="horario" type="time" class="m-2"></p>
             <p>Data de l'incident <input name="data" type="date" class="m-2">Hora <input name="hora" type="time" class="m-2">
                 <input name="lloc" type="text" class="m-2" placeholder="Lloc"></p>
 
-                <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea><br/>
+                <p>Descripcio de l'incident:</p><textarea name="descripcion" cols="100" rows="10"></textarea><br/>
 
                 Activar faltas graves<input name="cambio" id="check" type="checkbox" value="" onchange="javascript:showContent()"><br/>
                
