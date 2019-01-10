@@ -84,7 +84,13 @@ exports.create = (req,res)=>{
     if (req.body.director =='marcado'){
         req.body.director = true;
     }else{
+        console.log("Estamos marcando el director");
         req.body.director = false;
+    }
+    if (req.body.check =='marcado'){
+        req.body.check = true;
+    }else{
+        req.body.check = false;
     }
 
 
@@ -98,7 +104,7 @@ exports.create = (req,res)=>{
         horario: req.body.horario || "Sin horario",
         hora: req.body.hora || "Sin hora",
         descripcion:req.body.descripcion || "Sin descripcion",
-        cambio: req.body.cambio || "Sin cambio",
+        check: req.body.check || false,
         incidentegrave: req.body.incidentegrave || "Sin incidentgrave",
         tip_42_a: req.body.tip_42_a || "Sin Incidencia",
         tip_42_b: req.body.tip_42_b || "Sin Incidencia",
@@ -122,19 +128,17 @@ exports.create = (req,res)=>{
         tipoAmonC: req.body.tipoAmonC || false,
         tipoAmonD: req.body.tipoAmonD || false,
         tipoAmonE: req.body.tipoAmonE || false,
-        dies: req.body.dies || "Sin dies",
+        dies: req.body.dies || "",
         tipoAmonG: req.body.tipoAmonG || false,
-        tasques: req.body.tasques || "Sin tasques",
-        tasque: req.body.tasque || "Sin tasque",
-        dies1: req.body.dies1 || "Sin dies1",
-        horari: req.body.horari || "Sin horari",
-        extracolars: req.body.extracolars || "Sin extracolars",
+        tasque: req.body.tasque || "",
+        dies1: req.body.dies1 || "",
+        horari: req.body.horari || "",
         tipoAmonH: req.body.tipoAmonH || false,
-        suspensio: req.body.suspensio || "Sin suspensio",
+        suspensio: req.body.suspensio || "",
         tipoAmonI: req.body.tipoAmonI || false,
-        assistencia: req.body.assistencia || "Sin assistencia",
-        desde: req.body.desde || "Sin desde",
-        fina: req.body.fina || "Sin fina",
+        assistencia: req.body.assistencia || "",
+        desde: req.body.desde || "",
+        fina: req.body.fina || "",
         incidente: req.body.incidente || "Sin incidente",
         nada: req.body.nada || "campo sin rellenar",
         tip_35_a: req.body.tip_35_a || "Sin Incidencias2",
@@ -156,14 +160,14 @@ exports.create = (req,res)=>{
         tip_35_q: req.body.tip_35_q || "Sin Incidencias2",
         tip_35_r: req.body.tip_35_r || "Sin Incidencias2",
         tip_35_s: req.body.tip_35_s || "Sin Incidencias2",
-        telefon: req.body.telefon || "Sin telefon",
+        telefon: req.body.telefon || "",
         correu: req.body.correu || false,
         alum: req.body.alum || false,
         tutor: req.body.tutor || false,
         conductes: req.body.conductes || "Sin conductes",
-        paiporta: req.body.paiporta || "Sin paiporta",
-        de: req.body.de || "Sin de",
-        anio: req.body.anio || "Sin anio",
+        paiporta: req.body.paiporta || "",
+        de: req.body.de || "",
+        anio: req.body.anio || "",
         director: req.body.director || false
         
 
@@ -241,8 +245,8 @@ exports.update = (req, res) => {
         grupo: req.body.grupo || "Sin grupo",
         horario: req.body.horario || "Sin horario",
         hora: req.body.hora || "Sin hora",
+        check: req.body.check || false,
         descripcion:req.body.descripcion || "Sin descripcion",
-        cambio: req.body.cambio || "Sin cambio",
         incidentegrave: req.body.incidentegrave || "Sin incidentgrave",
         tip_42_a: req.body.tip_42_a || "Sin Incidencia",
         tip_42_b: req.body.tip_42_b || "Sin Incidencia",
@@ -266,19 +270,17 @@ exports.update = (req, res) => {
         tipoAmonC: req.body.tipoAmonC || false,
         tipoAmonD: req.body.tipoAmonD || false,
         tipoAmonE: req.body.tipoAmonE || false,
-        dies: req.body.dies || "Sin dies",
+        dies: req.body.dies || "",
         tipoAmonG: req.body.tipoAmonG || false,
-        tasques: req.body.tasques || "Sin tasques",
-        tasque: req.body.tasque || "Sin tasque",
-        dies1: req.body.dies1 || "Sin dies1",
-        horari: req.body.horari || "Sin horari",
-        extracolars: req.body.extracolars || "Sin extracolars",
+        tasque: req.body.tasque || "",
+        dies1: req.body.dies1 || "",
+        horari: req.body.horari || "",
         tipoAmonH: req.body.tipoAmonH || false,
-        suspensio: req.body.suspensio || "Sin suspensio",
+        suspensio: req.body.suspensio || "",
         tipoAmonI: req.body.tipoAmonI || false,
-        assistencia: req.body.assistencia || "Sin assistencia",
-        desde: req.body.desde || "Sin desde",
-        fina: req.body.fina || "Sin fina",
+        assistencia: req.body.assistencia || "",
+        desde: req.body.desde || "",
+        fina: req.body.fina || "",
         incidente: req.body.incidente || "Sin incidente",
         nada: req.body.nada || "campo sin rellenar",
         tip_35_a: req.body.tip_35_a || "Sin Nombre",
@@ -300,15 +302,15 @@ exports.update = (req, res) => {
         tip_35_q: req.body.tip_35_q || "Sin Nombre",
         tip_35_r: req.body.tip_35_r || "Sin Nombre",
         tip_35_s: req.body.tip_35_s || "Sin Nombre",
-        telefon: req.body.telefon || "Sin telefon",
+        telefon: req.body.telefon || "",
         correu: req.body.correu || "Sin Nombre",
         alum: req.body.alum || "Sin Nombre",
         tutor: req.body.tutor || "Sin Nombre",
         conductes: req.body.conductes || "Sin Nombre",
-        paiporta: req.body.paiporta || "Sin paiporta",
-        de: req.body.de || "Sin de",
-        anio: req.body.anio || "Sin anio",
-        director: req.body.director || "Sin director"
+        paiporta: req.body.paiporta || "",
+        de: req.body.de || "",
+        anio: req.body.anio || "",
+        director: req.body.director || false
     },
     
     {new: true})

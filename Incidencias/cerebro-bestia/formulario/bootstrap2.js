@@ -11,7 +11,15 @@ $.getJSON( "incidencias/"+incidenciaId, function( data ) {
         
         //var campo= document.getElementsByName(key)[0].value;
         if(document.getElementsByName(key)[0]!= undefined){
-        document.getElementsByName(key)[0].value = val;
+          let el = document.getElementsByName(key)[0];
+          if (el.type && el.type === 'checkbox'){
+            console.log(" ** Es un checkbox "+el);
+            console.log(" El valor es : "+ val+ " <---");
+            document.getElementsByName(key)[0].checked=val;
+          }else{
+            document.getElementsByName(key)[0].value = val;
+          }
+
         }
        
         

@@ -45,9 +45,9 @@
             <p>Data de l'incident <input name="data" type="date" class="m-2">Hora <input name="hora" type="time" class="m-2">
                 <input name="lloc" type="text" class="m-2" placeholder="Lloc"></p>
 
-                <p>Descripcio de l'incident:</p><textarea cols="100" rows="10"></textarea><br/>
+                <p>Descripcio de l'incident:</p><textarea name="descripcion" cols="100" rows="10"></textarea><br/>
 
-                Activar faltas graves<input name="cambio" id="check" type="checkbox" value="" onchange="javascript:showContent()"><br/>
+                Activar faltas graves<input name="cambio" id="check" type="checkbox" value="marcado" name="check" onchange="javascript:showContent()"><br/>
                
 
                 <p class="grave" style="display: none">
@@ -106,7 +106,7 @@
                 <div class="row">
                     <div class="col-16">
                         <div class="col">
-                        <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonG" name="tasques" name="tipoAmonG">Realitzacio de les següents tasques educadores:
+                        <input class="form-check-input" type="checkbox" value="marcado" id="tipoAmonG" name="tipoAmonG">Realitzacio de les següents tasques educadores:
                         </div>
                     
                         <div class="col">
@@ -163,7 +163,6 @@
             <p class="leve">Tipificacio(3) de l'incident segons l'article 35 del infierno: 
                 <select name="incidente" class="form-control">
 
-                <option value="nada">Rellena este campo</option>
                 <option value="tip_35_a">Les faltes de puntualitat injustificades.</option>
                 <option value="tip_35_b">Les faltes d'assistència injustificades.</option>
                 <option value="tip_35_c">Els actes que alteren el normal desenvolupament de les activitats del centre educatiu, especialment
@@ -203,18 +202,18 @@
                 
             </p>
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="marcado" id="correu" >
-                    <label class="form-check-label" for="tipoAmoncorreu" name="correu">Per correu</label>
+                    <input class="form-check-input" type="checkbox" value="marcado" id="correu" name="correu" >
+                    <label class="form-check-label" for="tipoAmoncorreu" >Per correu</label>
                    
             </div>
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="marcado" id="alum" >
-                    <label class="form-check-label" for="tipoAmonalum" name="alum">Per mig de l'alumne</label>
+                    <input class="form-check-input" type="checkbox" value="marcado" id="alum" name="alum">
+                    <label class="form-check-label" for="tipoAmonalum" >Per mig de l'alumne</label>
                    
             </div>
             <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="marcado" id="tutor" >
-                    <label class="form-check-label" for="tipoAmontutor" name="tutor">Amb compareixença del pare/mare/tutor legal</label>
+                    <input class="form-check-input" type="checkbox" value="marcado" id="tutor" name="tutor">
+                    <label class="form-check-label" for="tipoAmontutor" >Amb compareixença del pare/mare/tutor legal</label>
                    
             </div>
             
@@ -227,7 +226,7 @@
 
             <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="marcado" id="director" name="director">
-                    <p class="form-check-label" for="tipoAmondirector">Signatura del cap d'estudis/director</p>
+                    <label class="form-check-label" for="tipoAmondirector">Signatura del cap d'estudis/director</label>
                    
             </div>
         <br/>
