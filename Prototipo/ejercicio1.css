@@ -1,0 +1,71 @@
+.container {
+    display: grid;
+    grid-gap: 5px;    
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+    grid-template-areas:
+        "h h h h h h h h h h h h"
+        "m m c c c c c c c c c c"
+        "f f f f f f f f f f f f";
+        background: url('img/fondo1.jpg') no-repeat;
+        
+
+}
+
+.header {
+    grid-area: h;
+    text-align: center;
+    
+}
+
+.menu {
+    grid-area: m;
+    margin-top: 30%;
+}
+
+.content {
+    grid-area: c;
+    margin-top: 10%;
+    /*width: 100%;
+    height:500px ;*/
+}
+
+.uno{
+    
+    width: 50%;
+    display:block;
+    margin-left: 15%;
+}
+
+.salado{
+    background-color: white;
+    margin-left: 5%;
+}
+
+.dulce{
+    background-color: white;
+    margin-left: 5%;
+    
+}
+
+.pie{
+    width: 110%;
+    margin-right: 50%;
+
+}
+
+
+
+.footer {
+   grid-area: f;
+   margin-top: 10%;   
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        grid-template-areas:
+            "m m m m m m h h h h h h"
+            "c c c c c c c c c c c c"
+            "f f f f f f f f f f f f";
+    }
+}
