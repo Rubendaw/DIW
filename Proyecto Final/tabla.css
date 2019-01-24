@@ -1,0 +1,39 @@
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+    width: 100%;
+    height: 1000px;
+}
+
+#superheroes{
+    background-color: white;
+    width: 18%;
+    height: 680px;
+    margin-top: 2%;
+    /*padding-left: 2%;*/
+}
+#Universos{
+    width: 100%;
+    background-color: green;
+    margin-top: 2%;
+}
+
+
+#Universo1{
+    background-color: aquamarine;
+    width: 100%;
+    height: 300px;
+    margin-top: 2%;
+    display: grid;
+    /*grid-template-columns: 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
+    grid-auto-flow: column;
+    grid-auto-flow: row;*/
+}
+
+.Grupo{
+
+    background-color: brown;
+    border: 2px solid black;
+}
