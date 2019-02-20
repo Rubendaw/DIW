@@ -1,0 +1,423 @@
+/*Div General*/
+#contenedor{
+    display: flex;
+    flex-direction: row;
+    background: url('imagenes/uni4.png') no-repeat; 
+    width: 100%;
+    height: 1500px;
+}
+
+#aciertos{
+    width: 3%;
+    height: 50px;
+    float: left;
+    margin-top: 30%;
+    margin-left: 9%;
+    padding-left: 20px;
+    color: green;
+    font-family: fantasy;
+    font-size: 50px;
+    border-radius: 20px;
+}
+
+#fallos{
+    width: 3%;
+    height: 50px;
+    float: right;
+    margin-top: 30%;
+    margin-right: 10%;
+    padding-left: 20px;
+    font-family: fantasy;
+    font-size: 50px;
+    color: red;
+    border-radius: 20px;
+}
+
+/*Div donde se listan los Superheroes */
+#superheroes{
+    width: 26.5%;
+    height: 980px;
+    margin-top: 10%;
+    float: left;
+}
+/*Div donde se listan los SuperVillanos */
+#supervillanos{
+    width: 26.5%;
+    height: 980px;
+    margin-top: 10%;
+    float: right;
+}
+
+/*Div donde se colocan los heros uno a uno*/
+.celda{
+    width:200px;
+    height:110px;   
+}
+/*Div donde se colocan los heros uno a uno*/
+.celda2{
+    width:200px;
+    height:110px;
+}
+
+/*Div donde estan insertados los dos universos*/
+#Universos{
+    width: 100%;
+    margin-top: 2%;    
+}
+
+#tituloMarvel{
+    margin-top: 1%;
+    padding:50px;
+}
+
+#logoMarvel{
+    height: 100px;
+    width: 100%;
+    background: url('imagenes/marvel3.png') no-repeat;
+    background-size: contain ;
+    background-position: center;
+    filter: drop-shadow(10px 10px 4px white);
+}
+
+#tituloDC{
+    padding: 50px; 
+    margin-top: 5%;    
+}
+
+#logoDC{
+    height: 100px;
+    width: 100%;
+    background: url('imagenes/dc1.png') no-repeat;
+    background-size: contain ;
+    background-position: center;
+    filter: drop-shadow(10px 10px 4px white);
+}
+/*Div del universo Marvel*/
+#Marvel{    
+    width: 60%;
+    height: 350px;
+    margin-top: 4%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+    justify-items: stretch;
+    grid-gap: 10px 10px;
+    margin-left: 18%;   
+}
+
+.marvelG{
+    color: black;
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap:10px;
+}
+
+#Grupo1{
+    background: url('imagenes/vengadores1.png') no-repeat;  
+}
+
+#Grupo2{
+    background: url('imagenes/los4.png') no-repeat; 
+}
+
+#Grupo3{
+    background: url('imagenes/xmen.png') no-repeat; 
+}
+
+#Grupo4{
+    background: url('imagenes/inhumanos.png') no-repeat; 
+}
+
+#Grupo5{
+    background: url('imagenes/liga.png') no-repeat; 
+}
+
+#Grupo6{
+    background: url('imagenes/watchmen.png') no-repeat; 
+}
+
+#Grupo7{
+    background: url('imagenes/escuadron.png') no-repeat; 
+}
+
+#Grupo8{
+    background: url('imagenes/linterna.png') no-repeat; 
+}
+
+#DCComics{  
+    width: 60%;
+    height: 350px;
+    margin-top: 4%;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: stretch;
+    justify-items: stretch;
+    grid-gap: 10px 10px;
+    margin-left: 18%;
+}
+
+#img1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display:block;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+    max-width: 100%;    
+}
+/*SuperHeroes*/
+
+.superHeroe {
+    border-radius: 20px;
+    box-shadow: 5px 10px  10px  white;
+}
+
+.superVillano{
+    border-radius: 20px;
+    box-shadow: -5px 10px  10px  white;
+}
+
+#Thor{
+    background: url('imagenes/thor2.png') no-repeat;
+    float: right;
+}
+#Spiderman{
+    background: url('imagenes/spiderman.png') no-repeat;
+}
+
+#Cosa{
+    background: url('imagenes/cosa2.png') no-repeat;
+    float: right;    
+}
+
+#MrFantastico{
+    background: url('imagenes/fantastico.png') no-repeat;    
+}
+
+#Lobezno{
+    background: url('imagenes/lobezno.png') no-repeat;
+    float: right;
+}
+
+#ProfesorX{
+    background: url('imagenes/profesor.png') no-repeat;    
+}
+
+#Medusa{
+    background: url('imagenes/medusa.png') no-repeat;
+    float: right;
+}
+
+#RayoNegro{
+    background: url('imagenes/rayonegro.png') no-repeat;
+}
+
+#Superman{
+    background: url('imagenes/superman.png') no-repeat;
+    float: right;
+}
+
+#WonderWoman{
+    background: url('imagenes/maravilla.png') no-repeat;    
+}
+
+#Rorschach{
+    background: url('imagenes/rorschach.png') no-repeat;
+    float: right;
+}
+
+#DRManhatan{
+    background: url('imagenes/drmanhatan.png') no-repeat;    
+}
+
+#Deadshot{
+    background: url('imagenes/Deadshot.png') no-repeat;
+    float: right;    
+}
+
+#HarleyQuinn{
+    background: url('imagenes/harleyquinn.png') no-repeat;    
+}
+
+#LinternaVerde{
+    background: url('imagenes/linternaverde.png') no-repeat;
+    float: right;
+}
+
+#Siniestro{
+    background: url('imagenes/siniestro.png') no-repeat;    
+}
+
+/*Supervillanos*/
+#Thanos{
+    background: url('imagenes/thanos.png') no-repeat;
+    float: right;    
+}
+
+#Ultron{
+    background: url('imagenes/ultron.png') no-repeat;    
+}
+
+#DrDoom{
+    background: url('imagenes/drdoom.png') no-repeat;
+    float: right;    
+}
+
+#SilverSurfer{
+    background: url('imagenes/silversurfer.png') no-repeat;    
+}
+
+#Magneto{
+    background: url('imagenes/magneto.png') no-repeat;
+    float: right;    
+}
+
+#Apocalipsis{
+    background: url('imagenes/apocalipsis.png') no-repeat;  
+}
+
+#Maximus{
+    background: url('imagenes/maximus.png') no-repeat;
+    float: right;    
+}
+
+#Auran{
+    background: url('imagenes/auran.png') no-repeat; 
+}
+
+#Lexluthor{
+    background: url('imagenes/lexluthor.png') no-repeat;
+    float: right;    
+}
+
+#Steppenwolf{
+    background: url('imagenes/steppenwolf.png') no-repeat;   
+}
+
+#moloch{
+    background: url('imagenes/moloch.png') no-repeat;
+    float: right;    
+}
+
+#Ozymandias{
+    background: url('imagenes/ozymandias.png') no-repeat; 
+}
+
+#Joker{
+    background: url('imagenes/joker.png') no-repeat;
+    float: right;
+}
+
+#KillerCroc{
+    background: url('imagenes/killercroc.png') no-repeat;    
+}
+
+#HectorHammond{
+    background: url('imagenes/hector.png') no-repeat;
+    float: right;
+}
+
+#Parallax{
+    background: url('imagenes/parallax.png') no-repeat;    
+}
+/*CSS login*/
+
+/* Container */
+.container2{
+    width:40%;
+    margin:0 auto;
+}
+
+/* Login */
+#div_login{
+    border: 1px solid gray;
+    border-radius: 3px;
+    width: 470px;
+    height: 230px;
+    box-shadow: 0px 2px 2px 0px  gray;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-left: 20%;    
+}
+
+#div_login h1{
+    margin-top: 0px;
+    font-weight: normal;
+    padding: 10px;
+    background: linear-gradient(to left, red 0%, darkblue 100%);
+    color: white;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+
+#div_login div{
+    clear: both;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+#div_login .textbox{
+    width: 90%;
+    padding: 7px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#sesion{
+    padding: 7px;
+    width: 100px;
+    background-color: darkblue;
+    border: 0px;
+    color: white;
+    border-radius: 20px;
+}
+
+#crear{
+    padding: 7px;
+    width: 100px;
+    background-color:red;
+    border: 0px;
+    color: white;
+    float: right;
+    border-radius: 20px;
+}
+
+
+/* media */
+@media screen and (max-width:720px){
+    .container{
+        width: 100%;
+    }
+    #div_login{
+        width: 99%;
+    }
+}
+
+#salir{
+    margin-left: 48%; 
+    width: 80px;
+    height: 30px;  
+    border-radius: 20px;   
+}
+
+#marvelvsdc{
+    background: url('imagenes/login3.png') no-repeat;
+    background-size: cover;    
+}
+
+#saludo{
+    text-align: center;
+    margin-left: 35%;
+    background-color: transparent;
+    color: white;
+    border-style: hidden;
+    padding: 1%;
+    font-size: 30px;
+}
